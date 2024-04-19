@@ -25,6 +25,19 @@
             return choices[Math.floor(Math.random() * choices.length)];
         }
 
+        function evaulateChoices(playerChoice, computerChoice) {
+            if (playerChoice === computerChoice) {
+                return "draw";
+            } else if (
+                (playerChoice === "rock" && computerChoice === "scissors")
+                || (playerChoice === "paper" && computerChoice === "rock")
+                || (playerChoice === "scissors" && computerChoice === "paper")) {
+                return "player";
+            } else {
+                return "computer";
+            }
+        }
+
         function playRound() {
             let playerChoice = getPlayerChoice();
             let computerChoice = getComputerChoice();
@@ -32,15 +45,13 @@
             console.log(`Player: ${playerChoice}`);
             console.log(`Computer: ${computerChoice}`);
 
-            if (playerChoice === computerChoice) {
-                console.log("Draw!");
-            } else if (
-                (playerChoice === "rock" && computerChoice === "scissors")
-                || (playerChoice === "paper" && computerChoice === "rock")
-                || (playerChoice === "scissors" && computerChoice === "paper")) {
-                console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+            let result = evaulateChoices(playerChoice, computerChoice);
+            if (result === "player") {
+                console.log(`You win! ${playerChoice} beats ${computerChoice}!`);
+            } else if (result === "computer") {
+                console.log(`You lose! ${computerChoice} beats ${playerChoice}!`);
             } else {
-                console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+                console.log("Draw!");
             }
         }
 
