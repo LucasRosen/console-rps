@@ -24,6 +24,27 @@
         function getComputerChoice() {
             return choices[Math.floor(Math.random() * choices.length)];
         }
+
+        function playRound() {
+            let playerChoice = getPlayerChoice();
+            let computerChoice = getComputerChoice();
+
+            console.log(`Player: ${playerChoice}`);
+            console.log(`Computer: ${computerChoice}`);
+
+            if (playerChoice === computerChoice) {
+                console.log("Draw!");
+            } else if (
+                (playerChoice === "rock" && computerChoice === "scissors")
+                || (playerChoice === "paper" && computerChoice === "rock")
+                || (playerChoice === "scissors" && computerChoice === "paper")) {
+                console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+            } else {
+                console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+            }
+        }
+
+        playRound();
     </script>
 </body>
 </html>
