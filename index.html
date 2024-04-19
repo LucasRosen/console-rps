@@ -7,7 +7,23 @@
 </head>
 <body>
     <script>
-        
+        const choices = ["rock", "paper", "scissors"];
+
+        function getPlayerChoice() {
+            let playerChoice = prompt("Rock, paper, or scissors?", "rock");
+            if (playerChoice) {playerChoice = playerChoice.toLowerCase()};
+
+            if (choices.includes(playerChoice)) {
+                return playerChoice;
+            } else {
+                console.log(`${playerChoice} is not a valid choice.`);
+                getPlayerChoice();
+            }
+        }
+
+        function getComputerChoice() {
+            return choices[Math.floor(Math.random() * choices.length)];
+        }
     </script>
 </body>
 </html>
