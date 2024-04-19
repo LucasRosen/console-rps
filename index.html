@@ -53,9 +53,33 @@
             } else {
                 console.log("Draw!");
             }
+
+            return result;
         }
 
-        playRound();
+        function playGame() {
+            let playerScore = 0;
+            let computerScore = 0;
+            let draws = 0;
+
+            for (let i = 0; i < 5; i++) {
+                let result = playRound();
+
+                if (result === "player") {
+                    playerScore++;
+                } else if (result === "computer") {
+                    computerScore++;
+                } else {
+                    draws++
+                }
+            }
+
+            console.log(`You: ${playerScore}`);
+            console.log(`Computer: ${computerScore}`);
+            console.log(`Draws: ${draws}`);
+        }
+
+        playGame();
     </script>
 </body>
 </html>
