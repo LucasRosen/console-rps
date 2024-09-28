@@ -121,3 +121,13 @@ body,
 #button-container * {
   background-color: var(--bg-color-3);
 }
+
+/* Button effects */
+#button-container img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 28px #222;
+}
+
+#button-container img:active {
+  background-color: hsl(231, 21%, 60%);
+}
