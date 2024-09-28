@@ -7,10 +7,6 @@
   --text-color: #ffc83d;
 }
 
-* {
-  /*border: 1px red solid;*/
-}
-
 body {
   font-family: "Montserrat", "Courier New", Courier, monospace, system-ui;
 
