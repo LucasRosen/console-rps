@@ -1,4 +1,3 @@
-# console-rps
+# Rock Paper Scissors
 
-A simple Rock Paper Scissors game that runs in the console tab of the developer tools.
-Made to practice javascript.
+A basic rock paper scissors game that originally ran in the console window. Since then I have added UI using HTML and CSS aswell as adding JavaScript to learn about DOM Manipulation.
