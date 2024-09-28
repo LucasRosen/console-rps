@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-color: #2d3250;
+  --bg-color-2: #424769;
+  --bg-color-3: #7077a1;
+  --text-color: #ffc83d;
+}
+
+* {
+  /*border: 1px red solid;*/
+}
+
+body {
+  font-family: "Montserrat", "Courier New", Courier, monospace, system-ui;
+
+  box-sizing: border-box;
+  margin: 0;
+
+  background-color: var(--bg-color);
+}
+
+h1 {
+  margin: 16px 0 0 0;
+
+  color: var(--text-color);
+  text-align: center;
+  text-wrap: wrap;
+}
+
+p {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+
+  font-size: 116px;
+  background-color: transparent;
+  border: 0;
+}
+
+.rounded-corners {
+  border-radius: 12px;
+}
+
+body,
+#container,
+#scoreboard,
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#score-container,
+#button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  margin-top: 24px;
+}
+
+#status {
+  margin: 0;
+  padding: 16px;
+
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  background-color: var(--bg-color-2);
+}
+
+#score-container {
+  gap: 32px;
+
+  padding: 24px;
+
+  background-color: var(--bg-color-2);
+}
+
+.profile {
+  background-color: var(--bg-color-3);
+}
+
+.profile img {
+  padding: 16px;
+}
+
+.profile p {
+  font-weight: 500;
+}
+
+#scoreboard {
+  font-size: 40px;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+#button-container {
+  gap: 16px;
+
+  margin-top: 36px;
+  padding: 24px;
+
+  background-color: var(--bg-color-2);
+}
+
+#button-container * {
+  background-color: var(--bg-color-3);
+}
